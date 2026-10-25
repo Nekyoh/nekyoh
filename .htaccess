@@ -1,0 +1,12 @@
+# Bloqueia acesso direto a arquivos internos (Apache 2.4)
+<Files "config.php">
+    Require all denied
+</Files>
+
+# Pastas e arquivos ocultos (.git, .gitignore…) e arquivos de projeto não são páginas do site
+RedirectMatch 404 /\.(git|svn|idea|vscode)(/|$)
+<FilesMatch "^(\.gitignore|\.gitattributes|composer\.(json|lock)|README\.md|LICENSE)$">
+    Require all denied
+</FilesMatch>
+
+DirectoryIndex index.php

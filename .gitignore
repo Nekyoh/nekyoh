@@ -1,0 +1,17 @@
+# Gerado pelo "composer install" — o SchematicCount funciona sem ele (src/bootstrap.php tem autoload próprio)
+/ferramentas/schematiccount/vendor/
+
+# Sistema / editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+
+# Logs e testes locais
+*.log
+/ferramentas/schematiccount/tools/*.litematic
+/ferramentas/schematiccount/tools/*.schem
+
+# NÃO ignore assets/vendor/ — o Three.js do 3D dos Círculos está lá e o site precisa dele

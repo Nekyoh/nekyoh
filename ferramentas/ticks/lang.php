@@ -1,0 +1,36 @@
+<?php
+return [
+    'pt' => [
+        'ticks.value' => 'Valor', 'ticks.unit' => 'Unidade',
+        'ticks.u.gt' => 'Ticks de jogo', 'ticks.u.rt' => 'Ticks de redstone', 'ticks.u.s' => 'Segundos', 'ticks.u.min' => 'Minutos', 'ticks.u.h' => 'Horas', 'ticks.u.dia' => 'Dias do jogo',
+        'ticks.note' => 'Base: 20 ticks por segundo (servidor sem lag). 1 tick de redstone = 2 ticks de jogo = 0,1 s. Um dia do jogo dura 24 000 ticks = 20 minutos.',
+        'ticks.clock' => 'Hora do dia no jogo', 'ticks.daytime' => 'Tempo do dia (ticks)',
+        'ticks.phase.amanhecer' => 'Amanhecer', 'ticks.phase.dia' => 'Dia', 'ticks.phase.meio_dia' => 'Meio-dia', 'ticks.phase.entardecer' => 'Entardecer',
+        'ticks.phase.noite' => 'Noite', 'ticks.phase.meia_noite' => 'Meia-noite',
+        'ticks.mobs' => 'Monstros podem nascer na superfície', 'ticks.sleep' => 'Dá para dormir',
+        'ticks.presets' => 'Atalhos', 'ticks.repeater' => 'Repetidor', 'ticks.repeater_hint' => 'Cada clique no repetidor soma 1 tick de redstone.',
+        'ticks.clicks' => '{n} clique(s)', 'ticks.cmd' => 'Comando',
+    ],
+    'en' => [
+        'ticks.value' => 'Value', 'ticks.unit' => 'Unit',
+        'ticks.u.gt' => 'Game ticks', 'ticks.u.rt' => 'Redstone ticks', 'ticks.u.s' => 'Seconds', 'ticks.u.min' => 'Minutes', 'ticks.u.h' => 'Hours', 'ticks.u.dia' => 'In-game days',
+        'ticks.note' => 'Based on 20 ticks per second (no server lag). 1 redstone tick = 2 game ticks = 0.1 s. An in-game day lasts 24,000 ticks = 20 minutes.',
+        'ticks.clock' => 'In-game time of day', 'ticks.daytime' => 'Daytime (ticks)',
+        'ticks.phase.amanhecer' => 'Sunrise', 'ticks.phase.dia' => 'Day', 'ticks.phase.meio_dia' => 'Noon', 'ticks.phase.entardecer' => 'Sunset',
+        'ticks.phase.noite' => 'Night', 'ticks.phase.meia_noite' => 'Midnight',
+        'ticks.mobs' => 'Monsters can spawn on the surface', 'ticks.sleep' => 'You can sleep',
+        'ticks.presets' => 'Shortcuts', 'ticks.repeater' => 'Repeater', 'ticks.repeater_hint' => 'Each click on a repeater adds 1 redstone tick.',
+        'ticks.clicks' => '{n} click(s)', 'ticks.cmd' => 'Command',
+    ],
+    'es' => [
+        'ticks.value' => 'Valor', 'ticks.unit' => 'Unidad',
+        'ticks.u.gt' => 'Ticks de juego', 'ticks.u.rt' => 'Ticks de redstone', 'ticks.u.s' => 'Segundos', 'ticks.u.min' => 'Minutos', 'ticks.u.h' => 'Horas', 'ticks.u.dia' => 'Días del juego',
+        'ticks.note' => 'Base: 20 ticks por segundo (servidor sin lag). 1 tick de redstone = 2 ticks de juego = 0,1 s. Un día del juego dura 24 000 ticks = 20 minutos.',
+        'ticks.clock' => 'Hora del día en el juego', 'ticks.daytime' => 'Tiempo del día (ticks)',
+        'ticks.phase.amanhecer' => 'Amanecer', 'ticks.phase.dia' => 'Día', 'ticks.phase.meio_dia' => 'Mediodía', 'ticks.phase.entardecer' => 'Atardecer',
+        'ticks.phase.noite' => 'Noche', 'ticks.phase.meia_noite' => 'Medianoche',
+        'ticks.mobs' => 'Los monstruos pueden aparecer en la superficie', 'ticks.sleep' => 'Puedes dormir',
+        'ticks.presets' => 'Atajos', 'ticks.repeater' => 'Repetidor', 'ticks.repeater_hint' => 'Cada clic en el repetidor suma 1 tick de redstone.',
+        'ticks.clicks' => '{n} clic(s)', 'ticks.cmd' => 'Comando',
+    ],
+];

@@ -1,0 +1,5 @@
+# Bloqueia acesso direto a arquivos internos (Apache 2.4)
+<FilesMatch "^(config\.php|composer\.(json|lock))$">
+    Require all denied
+</FilesMatch>
+DirectoryIndex index.php

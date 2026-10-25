@@ -1,0 +1,16 @@
+{
+    "name": "nekyoh/schematic-count",
+    "description": "Lista de materiais para schematics do Minecraft (.litematic, .schem, .schematic, .nbt)",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.1",
+        "ext-zlib": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "SchematicCount\\": "src/"
+        }
+    }
+}
