@@ -10,3 +10,9 @@ RedirectMatch 404 /\.(git|svn|idea|vscode)(/|$)
 </FilesMatch>
 
 DirectoryIndex index.php
+
+# Sitemap para o Google: /sitemap.xml é gerado pelo sitemap.php
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^sitemap\.xml$ sitemap.php [L]
+</IfModule>

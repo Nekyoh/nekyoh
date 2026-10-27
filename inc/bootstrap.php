@@ -108,7 +108,7 @@ function pagina_inicio(string $titulo, string $descricao = '', string $classe = 
     <meta name="theme-color" content="#14121a">
     <meta property="og:title" content="<?= e($titulo) ?>">
     <meta property="og:description" content="<?= e($descricao ?: t('meta.desc')) ?>">
-    <meta property="og:image" content="<?= e($BASE) ?>assets/img/logo.png">
+    <meta property="og:image" content="https://<?= e($site['dominio']) ?>/assets/img/logo.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?= e($BASE) ?>assets/img/favicon_32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="<?= e($BASE) ?>assets/img/favicon_96.png">
     <link rel="apple-touch-icon" href="<?= e($BASE) ?>assets/img/favicon_180.png">
@@ -117,9 +117,33 @@ function pagina_inicio(string $titulo, string $descricao = '', string $classe = 
 <body class="<?= e($classe) ?>">
 <?php site_cabecalho(); }
 
-/** Fontes + CSS do site (para páginas que montam o próprio <head>). */
+/* ---------------- SEO ----------------
+ * Endereço "oficial" de cada página para o Google: um link canônico e as versões
+ * em cada idioma (?lang=pt|en|es). O endereço sem ?lang é o "x-default"
+ * (detecta o idioma de quem visita).
+ */
+function url_pagina(?string $lang = null): string {
+    global $site;
+    $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+    $path = preg_replace('#/index\.php$#', '/', $path);
+    return 'https://' . $site['dominio'] . $path . ($lang ? '?lang=' . $lang : '');
+}
+
+function seo_tags(): void {
+    global $site;
+    $escolhido = isset($_GET['lang'], $site['idiomas'][$_GET['lang']]) ? $_GET['lang'] : null;
+    echo '    <link rel="canonical" href="' . e(url_pagina($escolhido)) . '">' . "\n";
+    foreach ($site['idiomas'] as $cod => $_) {
+        echo '    <link rel="alternate" hreflang="' . e($cod) . '" href="' . e(url_pagina($cod)) . '">' . "\n";
+    }
+    echo '    <link rel="alternate" hreflang="x-default" href="' . e(url_pagina()) . '">' . "\n";
+    echo '    <meta property="og:url" content="' . e(url_pagina($escolhido)) . '">' . "\n";
+}
+
+/** Fontes + CSS do site (para páginas que montam o próprio <head>). Inclui as tags de SEO. */
 function site_estilos(): void {
-    global $BASE; ?>
+    global $BASE;
+    seo_tags(); ?>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">

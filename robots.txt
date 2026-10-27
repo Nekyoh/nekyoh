@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /ferramentas/schematiccount/api/
+
+Sitemap: https://nekyoh.tech/sitemap.xml
