@@ -33,7 +33,7 @@ $ferramentas = [
     ['id' => 'epiccraft', 'url' => 'https://epiccraft.nekyoh.tech', 'tipo' => 'externo', 'estado' => 'beta',
      'categoria' => ['mods', 'construcao'], 'item' => 'nether_star', 'logo' => 'assets/img/projetos/logoMod.png',
      'tags' => ['Mod'], 'destaque' => true],
-    ['id' => 'nekylauncher', 'url' => 'https://launcher.nekyoh.tech', 'tipo' => 'externo', 'estado' => 'beta',
+    ['id' => 'nekylauncher', 'url' => 'https://launcher.nekyoh.tech', 'tipo' => 'externo', 'estado' => 'ativo',
      'categoria' => ['mods'], 'item' => 'grass_block', 'logo' => 'assets/img/projetos/icon-256.png',
      'tags' => ['Launcher'], 'destaque' => true],
     // próximos plugins: copie um bloco acima e troque id, url e logo
